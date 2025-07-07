@@ -16,7 +16,7 @@ type OpenrouterProvider struct {
 
 func NewOpenrouterProvider(apiKey string) *OpenrouterProvider {
 	config := openai.DefaultConfig(apiKey)
-	config.BaseURL = "https://localhost:1234/v1/" // Custom endpoint if needed
+	config.BaseURL = "http://localhost:1234/v1/" // Custom endpoint if needed
 	return &OpenrouterProvider{
 		client:     openai.NewClientWithConfig(config),
 		modelNames: []string{},
